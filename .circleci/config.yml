@@ -317,7 +317,14 @@ commands:
       - checkout:
           path: *working_directory
       - install_deps_on_vm_executor
+      - run:
+          name: install move tools, modify shell
+          command: |
+            scripts/dev_setup.sh -b -p -y
+            source "${HOME}"/.profile
+          working_directory: *working_directory
       - shell_setup
+      - move_shell_setup
       - print_versions
   build_teardown:
     steps:
