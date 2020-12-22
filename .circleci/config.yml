@@ -877,18 +877,18 @@ jobs:
       - restore_cache:
           name: restore daily latch cache file.
           key: code-coverage-daily
-      - run:
-          name: Halt job if already built code coverage today.
-          command: |
-            NOW=`date +%Y-%m-%d`
-            LAST=`cat /home/circleci/lastbuild` || true
-            if [[ "$LAST" == "$NOW" ]]; then
-              echo Last build occured today, halting.
-              circleci step halt
-            else
-              echo Last build occured $LAST, building.
-              date +%Y-%m-%d > /home/circleci/lastbuild
-            fi
+      #      - run:
+      #          name: Halt job if already built code coverage today.
+      #          command: |
+      #            NOW=`date +%Y-%m-%d`
+      #            LAST=`cat /home/circleci/lastbuild` || true
+      #            if [[ "$LAST" == "$NOW" ]]; then
+      #              echo Last build occured today, halting.
+      #              circleci step halt
+      #            else
+      #              echo Last build occured $LAST, building.
+      #              date +%Y-%m-%d > /home/circleci/lastbuild
+      #            fi
       - save_cache:
           name: store updated daily latch file.
           key: code-coverage-daily-{{ epoch }}
