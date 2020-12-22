@@ -31,22 +31,22 @@ executors:
   vm-xlarge-caching-executor:
     machine:
       docker_layer_caching: true
-      image: ubuntu-2004:202010-01
+      image: ubuntu-1604:202004-01
     resource_class: xlarge
   vm-xlarge-executor:
     machine:
       docker_layer_caching: false
-      image: ubuntu-2004:202010-01
+      image: ubuntu-1604:202004-01
     resource_class: xlarge
   vm-large-executor:
     machine:
       docker_layer_caching: false
-      image: ubuntu-2004:202010-01
+      image: ubuntu-1604:202004-01
     resource_class: large
   vm-medium-executor:
     machine:
       docker_layer_caching: false
-      image: ubuntu-2004:202010-01
+      image: ubuntu-1604:202004-01
     resource_class: medium
 
 commands:
