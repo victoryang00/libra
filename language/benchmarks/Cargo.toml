@@ -11,7 +11,7 @@ edition = "2018"
 
 [dependencies]
 anyhow = "1.0.38"
-criterion = "0.3.3"
+criterion = "0.3.4"
 proptest = "0.10.1"
 
 bytecode-verifier = { path = "../bytecode-verifier", version = "0.1.0" }
