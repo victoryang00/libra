@@ -1,0 +1,11 @@
+(function() {var implementors = {};
+implementors["backup_cli"] = [{"text":"impl Deref for ShellSafeName","synthetic":false,"types":[]}];
+implementors["bytecode"] = [{"text":"impl&lt;E:&nbsp;Clone + Ord + Sized&gt; Deref for SetDomain&lt;E&gt;","synthetic":false,"types":[]},{"text":"impl&lt;K:&nbsp;Clone + Sized + Eq + Ord, V:&nbsp;AbstractDomain&gt; Deref for MapDomain&lt;K, V&gt;","synthetic":false,"types":[]}];
+implementors["consensus_types"] = [{"text":"impl Deref for MaybeSignedVoteProposal","synthetic":false,"types":[]}];
+implementors["diem_fuzzer"] = [{"text":"impl Deref for FuzzTarget","synthetic":false,"types":[]}];
+implementors["diem_json_rpc_client"] = [{"text":"impl&lt;R&gt; Deref for Response&lt;R&gt;","synthetic":false,"types":[]}];
+implementors["diem_proptest_helpers"] = [{"text":"impl Deref for Index","synthetic":false,"types":[]}];
+implementors["diem_types"] = [{"text":"impl Deref for ContractEvent","synthetic":false,"types":[]},{"text":"impl Deref for LedgerInfoWithSignatures","synthetic":false,"types":[]},{"text":"impl Deref for SignatureCheckedTransaction","synthetic":false,"types":[]}];
+implementors["move_core_types"] = [{"text":"impl Deref for Identifier","synthetic":false,"types":[]}];
+implementors["x_core"] = [{"text":"impl&lt;T&gt; Deref for DebugIgnore&lt;T&gt;","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

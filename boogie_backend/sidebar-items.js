@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["bytecode_translator","This module translates the bytecode of a module to Boogie code."],["options",""]]});

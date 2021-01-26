@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["cluster_test"] = [{"text":"impl&lt;'_&gt; Sub&lt;&amp;'_ AtomicHistogramSnapshot&gt; for &amp;'_ AtomicHistogramSnapshot","synthetic":false,"types":[]},{"text":"impl&lt;'_&gt; Sub&lt;&amp;'_ TxStats&gt; for &amp;'_ TxStats","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

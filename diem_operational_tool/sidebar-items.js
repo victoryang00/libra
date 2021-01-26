@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["command",""],["json_rpc",""],["test_helper",""]],"struct":[["TransactionContext","Information for validating a transaction after it's been submitted, or retrieving the execution result."]]});

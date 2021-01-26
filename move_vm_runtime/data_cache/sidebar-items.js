@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["AccountDataCache",""],["TransactionEffects","Collection of side effects produced by a Session."]],"trait":[["RemoteCache","Trait for the Move VM to abstract storage operations."]]});

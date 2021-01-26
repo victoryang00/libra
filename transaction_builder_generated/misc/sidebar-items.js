@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["encode_block_prologue_script",""],["encode_stdlib_upgrade_transaction","Update WriteSet"],["get_transaction_name","Returns a user friendly mnemonic for the transaction type if the transaction is for a known, white listed, transaction."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["DIEM_MODULE_NAME",""]],"fn":[["allowed_currency_code_string","In addition to the constraints for valid Move identifiers, currency codes should consist entirely of uppercase alphanumeric characters (e.g., no underscores)."],["from_currency_code_string",""],["type_tag_for_currency_code",""]],"static":[["COIN_MODULE",""]]});

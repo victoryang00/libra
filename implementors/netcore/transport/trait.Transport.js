@@ -1,0 +1,4 @@
+(function() {var implementors = {};
+implementors["netcore"] = [];
+implementors["network"] = [{"text":"impl&lt;TTransport:&nbsp;Transport&gt; Transport for DiemNetTransport&lt;TTransport&gt; <span class=\"where fmt-newline\">where<br>&nbsp;&nbsp;&nbsp;&nbsp;TTransport: Transport&lt;Error = Error&gt; + Send + 'static,<br>&nbsp;&nbsp;&nbsp;&nbsp;TTransport::Output: TSocket,<br>&nbsp;&nbsp;&nbsp;&nbsp;TTransport::Outbound: Send + 'static,<br>&nbsp;&nbsp;&nbsp;&nbsp;TTransport::Inbound: Send + 'static,<br>&nbsp;&nbsp;&nbsp;&nbsp;TTransport::Listener: Send + 'static,&nbsp;</span>","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

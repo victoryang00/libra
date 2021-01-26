@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["MoveKind",""],["MoveKindInfo",""],["MoveTypeLayout",""],["MoveValue",""]],"struct":[["MoveStruct",""],["MoveStructLayout",""]]});

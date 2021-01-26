@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["clear_error","Clear the most recent error."],["diem_strerror","Return the most recent error string."],["update_last_error","Update the most recent error."]]});

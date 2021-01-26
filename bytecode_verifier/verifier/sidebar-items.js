@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["verify_main_signature","This function checks the extra requirements on the signature of the main function of a script."],["verify_module","Helper for a \"canonical\" verification of a module."],["verify_script","Helper for a \"canonical\" verification of a script."]]});

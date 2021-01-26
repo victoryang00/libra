@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ExpRewriter","Rewriter for expressions, allowing to substitute locals by expressions as well as instantiate types."]]});

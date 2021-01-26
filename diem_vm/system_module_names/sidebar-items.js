@@ -1,0 +1,1 @@
+initSidebarItems({"static":[["BLOCK_PROLOGUE",""],["DIEM_BLOCK_MODULE","The ModuleId for the diem writeset manager module The ModuleId for the diem block module"],["MODULE_PROLOGUE_NAME",""],["SCRIPT_PROLOGUE_NAME",""],["USER_EPILOGUE_NAME",""],["WRITESET_EPILOGUE_NAME",""],["WRITESET_PROLOGUE_NAME",""]]});

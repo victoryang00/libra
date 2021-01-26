@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["account",""],["addresses",""],["coins",""],["diem",""],["event",""]]});

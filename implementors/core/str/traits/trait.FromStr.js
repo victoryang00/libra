@@ -1,0 +1,14 @@
+(function() {var implementors = {};
+implementors["backup_cli"] = [{"text":"impl FromStr for BackupStorageState","synthetic":false,"types":[]},{"text":"impl FromStr for ShellSafeName","synthetic":false,"types":[]}];
+implementors["diem_config"] = [{"text":"impl FromStr for RoleType","synthetic":false,"types":[]}];
+implementors["diem_crypto"] = [{"text":"impl FromStr for HashValue","synthetic":false,"types":[]}];
+implementors["diem_fuzzer"] = [{"text":"impl FromStr for FuzzTarget","synthetic":false,"types":[]}];
+implementors["diem_logger"] = [{"text":"impl FromStr for LevelFilter","synthetic":false,"types":[]},{"text":"impl FromStr for Level","synthetic":false,"types":[]}];
+implementors["diem_management"] = [{"text":"impl FromStr for SecureBackend","synthetic":false,"types":[]}];
+implementors["diem_network_address"] = [{"text":"impl FromStr for NetworkAddress","synthetic":false,"types":[]},{"text":"impl FromStr for DnsName","synthetic":false,"types":[]}];
+implementors["diem_types"] = [{"text":"impl FromStr for ChainId","synthetic":false,"types":[]},{"text":"impl FromStr for EventKey","synthetic":false,"types":[]},{"text":"impl FromStr for AuthenticationKey","synthetic":false,"types":[]},{"text":"impl FromStr for Waypoint","synthetic":false,"types":[]}];
+implementors["functional_tests"] = [{"text":"impl FromStr for Entry","synthetic":false,"types":[]},{"text":"impl FromStr for Balance","synthetic":false,"types":[]},{"text":"impl FromStr for Role","synthetic":false,"types":[]},{"text":"impl FromStr for Entry","synthetic":false,"types":[]},{"text":"impl FromStr for Entry","synthetic":false,"types":[]},{"text":"impl FromStr for Stage","synthetic":false,"types":[]}];
+implementors["generate_format"] = [{"text":"impl FromStr for Corpus","synthetic":false,"types":[]}];
+implementors["language_e2e_tests"] = [{"text":"impl FromStr for AccountRoleSpecifier","synthetic":false,"types":[]}];
+implementors["move_core_types"] = [{"text":"impl FromStr for AccountAddress","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

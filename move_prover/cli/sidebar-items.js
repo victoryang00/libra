@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["INLINE_PRELUDE","Represents the virtual path to the boogie prelude which is inlined into the binary."]],"struct":[["Options","Represents options provided to the tool. Most of those options are configured via a toml source; some over the command line flags."]]});
