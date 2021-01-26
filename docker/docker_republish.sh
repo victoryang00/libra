@@ -81,12 +81,20 @@ docker tag diem/validator_tcb:"$DOCKERHUB_TAG" "$TARGET_REPO"/"$TARGET_ORG"/vali
 docker tag diem/cluster_test:"$DOCKERHUB_TAG" "$TARGET_REPO"/"$TARGET_ORG"/cluster_test:"$OUTPUT_TAG"
 docker tag diem/client:"$DOCKERHUB_TAG" "$TARGET_REPO"/"$TARGET_ORG"/client:"$OUTPUT_TAG"
 
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/init:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/faucet:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/tools:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/validator:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/validator_tcb:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/cluster_test:"$OUTPUT_TAG"
-docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/client:"$OUTPUT_TAG"
+tmpfile=$(mktemp -t "message")
+success=0;
+echo "Failed to republish" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/init:"$OUTPUT_TAG" || success=1 && echo "client" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/faucet:"$OUTPUT_TAG" || success=1 && echo "faucet" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/tools:"$OUTPUT_TAG" || success=1 && echo "tools" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/validator:"$OUTPUT_TAG" || success=1 && echo "validator" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/validator_tcb:"$OUTPUT_TAG" || success=1 && echo "validator_tcb" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/cluster_test:"$OUTPUT_TAG" || success=1 && echo "cluster_test" >> "${tmpfile}"
+docker push --disable-content-trust="$DISABLE_TRUST" "$TARGET_REPO"/"$TARGET_ORG"/client:"$OUTPUT_TAG" || success=1 && echo "client" >> "${tmpfile}"
+
+if [[ "$success" == "1" ]]; then
+  cat "${tmpfile}"
+fi
 
 set +x
+exit "${success}"

@@ -51,13 +51,18 @@ jobs:
         run: |
           BRANCH="$CHANGES_TARGET_BRANCH"
           success=0
-          docker/build_push.sh -u -p -b ${BRANCH} -n client || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n init || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n faucet || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n tools || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n validator || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n validator-tcb || success=-1
-          docker/build_push.sh -u -p -b ${BRANCH} -n cluster-test || success=-1
+          "${tmpfile}"
+          echo "Failed to push:" > "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n client || success=1 && echo "client" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n init || success=1 && echo "init" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n faucet || success=1 && echo "faucet" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n tools || success=1 && echo "tools" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n validator || success=1 && echo "validator" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n validator-tcb || success=1 && echo "validator-tcb" >> "${tmpfile}"
+          docker/build_push.sh -u -p -b ${BRANCH} -n cluster-test || success=1 && echo "cluster-test" >> "${tmpfile}"
+          if [[ "$success" == "1" ]]; then
+            cat "${tmpfile}"
+          fi
           exit $success
         env:
           DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE: ${{ secrets.DOCKERHUB_KEY_PASSWORD }}
@@ -67,13 +72,18 @@ jobs:
           set -x
           BRANCH=$(echo "$GITHUB_REF" | sed 's|.*/||' )
           success=0
-          docker/build_push.sh -u -b ${BRANCH} -n client || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n init || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n faucet || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n tools || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n validator || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n validator-tcb || success=-1
-          docker/build_push.sh -u -b ${BRANCH} -n cluster-test || success=-1
+          xd
+          echo "Failed to push:" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n client || success=1 && echo "client" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n init || success=1 && echo "init" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n faucet || success=1 && echo "faucet" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n tools || success=1 && echo "tools" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n validator || success=1 && echo "validator" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n validator-tcb || success=1 && echo "validator-tcb" >> "${tmpfile}"
+          docker/build_push.sh -u -b ${BRANCH} -n cluster-test || success=1 && echo "cluster-test" >> "${tmpfile}"
+          if [[ "$success" == "1" ]]; then
+            cat "${tmpfile}"
+          fi
           exit $success
         env:
           DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE: ${{ secrets.DOCKERHUB_KEY_PASSWORD }}
