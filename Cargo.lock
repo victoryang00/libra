@@ -321,6 +321,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
+name = "base64ct"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b245b005bb8924f38647aeb31388984784a139acbe7ac6d7435fb0a11c4c83d8"
+
+[[package]]
 name = "bindgen"
 version = "0.54.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4712,6 +4718,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "password-hash"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad35539a493c5a6c5b02fa3ac28ca380af704ec297a3c078d8beaa40d5849be4"
+dependencies = [
+ "base64ct",
+]
+
+[[package]]
 name = "pathdiff"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4719,17 +4734,15 @@ checksum = "877630b3de15c0b64cc52f659345724fbf6bdad9bd9566699fc53688f3c34a34"
 
 [[package]]
 name = "pbkdf2"
-version = "0.5.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7170d73bf11f39b4ce1809aabc95bf5c33564cdc16fc3200ddda17a5f6e5e48b"
+checksum = "ca5c74683c467276ba17c4bb16e219487dc8fd4465b24d2653386e40de37dab6"
 dependencies = [
- "base64 0.12.3",
- "crypto-mac 0.9.1",
- "hmac 0.9.0",
- "rand 0.7.3",
- "rand_core 0.5.1",
+ "base64ct",
+ "crypto-mac 0.10.0",
+ "hmac 0.10.1",
+ "password-hash",
  "sha2",
- "subtle",
 ]
 
 [[package]]
