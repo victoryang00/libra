@@ -15,7 +15,7 @@ jobs:
     # The additional time can cover the retries and wait.
     timeout-minutes: 50
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.4
       - name: Get PR number
         id: pr-num
         uses: actions/github-script@v3
