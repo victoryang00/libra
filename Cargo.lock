@@ -6141,6 +6141,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fbee7696b84bbf3d89a1c2eccff0850e3047ed46bfcd2e92c29a2d074d57e252"
 
 [[package]]
+name = "smawk"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f67ad224767faa3c7d8b6d91985b78e70a1324408abcb1cfcc2be4c06bc06043"
+
+[[package]]
 name = "smoke-test"
 version = "0.1.0"
 dependencies = [
@@ -6704,6 +6710,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "textwrap"
+version = "0.14.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0066c8d12af8b5acd21e00547c3797fde4e8677254a7ee429176ccebbe93dd80"
+dependencies = [
+ "smawk",
+ "unicode-linebreak",
+ "unicode-width",
+]
+
+[[package]]
 name = "thiserror"
 version = "1.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6999,7 +7016,7 @@ dependencies = [
  "serde_yaml",
  "structopt 0.3.20",
  "tempfile",
- "textwrap 0.12.1",
+ "textwrap 0.14.2",
  "which 4.0.2",
 ]
 
@@ -7085,6 +7102,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49f2bd0c6468a8230e1db229cff8029217cf623c767ea5d60bfbd42729ea54d5"
 dependencies = [
  "matches",
+]
+
+[[package]]
+name = "unicode-linebreak"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05a31f45d18a3213b918019f78fe6a73a14ab896807f0aaf5622aa0684749455"
+dependencies = [
+ "regex",
 ]
 
 [[package]]
