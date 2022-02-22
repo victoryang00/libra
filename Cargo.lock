@@ -2028,13 +2028,13 @@ dependencies = [
 
 [[package]]
 name = "getrandom"
-version = "0.2.0"
+version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee8025cf36f917e6a52cce185b7c7177689b838b7ec138364e50cc2277a56cf4"
+checksum = "d39cd93900197114fa1fcb7ae84ca742095eed9442088988ae74fa744e930e77"
 dependencies = [
- "cfg-if 0.1.10",
+ "cfg-if 1.0.0",
  "libc",
- "wasi 0.9.0+wasi-snapshot-preview1",
+ "wasi 0.10.0+wasi-snapshot-preview1",
 ]
 
 [[package]]
@@ -6654,7 +6654,7 @@ version = "0.1.0"
 dependencies = [
  "bytecode-verifier",
  "crossbeam-channel",
- "getrandom 0.2.0",
+ "getrandom 0.2.5",
  "hex",
  "itertools 0.9.0",
  "language-e2e-tests",
