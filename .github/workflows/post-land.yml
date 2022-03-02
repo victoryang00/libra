@@ -13,7 +13,7 @@ jobs:
     # The pre-release suite run time varies 1~1.5 hr.
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: set_env
         id: set_env
         run: |
